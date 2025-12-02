@@ -1,0 +1,59 @@
+= Car Diagnosis Expert System
+:author: viz-x
+:version: 1.1
+
+== Description
+
+Expert system for diagnosing car starting problems using MUMPS/M.
+
+== Requirements
+
+* GT.M / YottaDB
+* InterSystems Caché / IRIS
+* Any MUMPS implementation
+
+== Installation
+
+[source,bash]
+----
+$ mumps CARDIAG.m
+----
+
+== Usage
+
+[source,mumps]
+----
+USER> D START^CARDIAG
+----
+
+Answer with `Y` or `N`.
+
+== Features
+
+* 12 diagnostic rules
+* Caches answers (no repeat questions)
+* Multiple diagnosis support
+* Input validation
+
+== Diagnoses
+
+Dead Battery • Weak Battery • Faulty Starter • Bad Solenoid +
+Bad Ignition Switch • Blown Fuse • Out of Fuel • Fuel Pump +
+Clogged Filter • Flooded Engine • Bad Spark Plugs • Electrical Short
+
+== Example
+
+----
+Do dashboard lights turn on? (Y/N): N
+Do headlights work normally? (Y/N): N
+
+DIAGNOSIS: DEAD BATTERY
+-> Jump-start or replace battery
+----
+
+== Files
+
+[cols="1,3"]
+|===
+|CARDIAG.m |Main routine (corrected v1.1)
+|===
